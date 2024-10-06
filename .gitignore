@@ -1,0 +1,21 @@
+# Ignore Python bytecode cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+venv/
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore environment files
+.env
+
+# Ignore logs
+*.log
+
+# Ignore build outputs
+build/
+dist/
+*.egg-info/

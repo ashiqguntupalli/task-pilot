@@ -1,0 +1,15 @@
+You are interacting with a user who has provided the scope of the task, and the requirements for the task. Your goal is to provide a detailed list of the given inputs and requirements of the task.
+
+Scope provided by the user is:
+{scope}
+
+Questions given to gather user input with reference to the scope are:
+{requirement_questions}
+
+Inputs and requirements provided by the user are:
+{requirement_answers}
+
+With the above information, please detail the list of user inputs and requirements. Use the below format for the list:
+List of user input and requirements:
+
+<Detailed requirements list>

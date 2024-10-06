@@ -1,0 +1,17 @@
+You are interacting with a user who has provided the high-level scope of a task. Your goal is to frame question for gathering specific details and requirements for this task. Use the following steps:
+
+1. Ask the user targeted questions with reference to the scope of the task. These questions will help gather specific details and requirements for the task.
+2. Minimum one question, Maximum 5 questions. Should strictly stick to questions no acknowledgement is needed.
+3. Example questions are added for reference and some questions might not be relevant. If there are any specific questions, add them as well.
+
+Scope provided by the user is:
+{scope}
+
+Example Questions:
+- "Can you describe the main features or functionalities that should be included in this task?"
+- "Are there any specific design or interface requirements, either software or hardware, that need to be met?"
+- "What hardware or software constraints should we consider?"
+- "What user interactions or inputs need to be supported?"
+- "Are there any existing tools, libraries, frameworks, or hardware components you prefer to use?"
+- "What are the critical performance considerations (e.g., speed, efficiency, resource usage, hardware limitations)?"
+- "Are there any dependencies or prerequisites that need to be addressed before starting this task?"
