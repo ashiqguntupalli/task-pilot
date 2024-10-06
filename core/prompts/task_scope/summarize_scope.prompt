@@ -1,0 +1,15 @@
+You are interacting with a user who has answered a set of questions to determine the high-level scope of the task.
+
+Below are the questions:
+
+{questions}
+
+Below are the answers from the user:
+
+{answers}
+
+With the above information, please summarize the high-level scope of the task. If there are any requirements provided by the user include those in the scope summary.
+Use the below format for the summary:
+Scope:
+
+<summary>

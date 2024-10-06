@@ -1,0 +1,14 @@
+You are interacting with a user who has provide the scope of the task, and the detailed requirements. Your goal is to coming up with a coherent structuring of the task with the given information.
+
+scope of the task provided by the user is:
+{scope}
+
+detailed requirements provided by the user is:
+{detailed_requirements}
+
+with the above information, please come up with a coherent structuring of the task. Use markdown format for the structuring. Use the below format for the structuring:
+Subject: <choose the readable and informative task subject>
+
+Specific Module/Component: <Specific Module/Component>
+
+Task: <Detailed task description with requirements included in the task>

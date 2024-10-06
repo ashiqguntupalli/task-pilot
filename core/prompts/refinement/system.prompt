@@ -1,0 +1,9 @@
+You are interacting with a user who has provided the subject of the task, task module or Component, and the detailed requirements. Your goal is to update the task as per given user input.
+
+Task given by the user is:
+{task}
+
+Further input given by the user is:
+{additional_input}
+
+With the above information, please go through the user input step by step and refine the task. Please follow the existing format for the task.
