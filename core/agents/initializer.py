@@ -17,9 +17,11 @@ class Initializer:
         Returns:
             tuple: Task subject and domain as strings.
         """
+        print("\n")
         print(colored("Hello! I'm here to help you create a task description.", "green"))
         print(colored("To get started, could you please provide a brief description of the task's subject and the module it falls under?", "green"))
         print(colored("Subject and module should be separated by a comma. For example: Subject, Module", "green"))
+        print("\n")
         user_input = input("Task subject and module: ")
 
         return self.parse_input(user_input)

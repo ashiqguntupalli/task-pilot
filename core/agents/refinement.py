@@ -20,6 +20,7 @@ class RefinementAgent:
         """
         Shows the current task description.
         """
+        print("\n")
         print(colored("\nCurrent Task Description:", "green"))
         print(colored(self.memory.get_variables("structuring").get("task_structure"), "green"))
     def __ask_if_further_input_needed(self):
@@ -46,13 +47,3 @@ class RefinementAgent:
         self.__show_task_description()
 
         self.memory.log_message("Refinement agent completed.")
-
-        """ while True:
-            # Show the current task description
-            self.__show_task_description()
-            # Ask if further input is needed
-            further_input = self.__ask_if_further_input_needed()
-            if further_input.strip().lower() == "ok":
-                break
-            # Refine the task description based on user input
-            self.__refine_task_description(further_input) """
