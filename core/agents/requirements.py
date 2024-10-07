@@ -41,7 +41,7 @@ class RequirementsAgent:
         Collect answers from the user.
         """
         print("\n")
-        print(colored(f"Please answer the above question(s) to understand the further requirements of the task:\n{requirement_questions}", "green"))
+        print(colored(f"Please answer the below question(s) to understand the further requirements of the task:\n{requirement_questions}", "green"))
         print("\n")
 
         answer = input("Your answer for the above question(s): ")
