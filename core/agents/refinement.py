@@ -22,6 +22,7 @@ class RefinementAgent:
         """
         print("\n")
         print(colored("\nCurrent Task Description:", "green"))
+        print("\n")
         print(colored(self.memory.get_variables("structuring").get("task_structure"), "green"))
     def __ask_if_further_input_needed(self):
         """
