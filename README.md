@@ -84,8 +84,9 @@ Task-pilot can be run from the command line with various options. Here are the a
 Before running task-pilot, ensure that:
 
 1. You have Python installed on your system.
-2. Ollama is installed and running in the background.
-3. The LLM model you intend to use is available in Ollama. For example, if you plan to use "llama3.2:3b", make sure it's pulled and ready in Ollama.
+2. Ensure specific python modules installed, One can use `pip install -r requirements.txt`. It is suggested to install this modules in a python virtual environment to avoid module versioning conflicts.
+3. Ollama is installed and running in the background.
+4. The LLM model you intend to use is available in Ollama. For example, if you plan to use "llama3.2:3b", make sure it's pulled and ready in Ollama.
 
 To start Ollama with a specific model, use: `ollama run <model_name>`
 Replace `<model_name>` with the model you want to use (e.g., llama3.2:3b, deepseek-coder, etc.).
