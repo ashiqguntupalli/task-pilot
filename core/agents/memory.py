@@ -5,7 +5,7 @@ class MemoryAgent:
     An agent that keeps track of variables collected from other agents during the workflow.
     """
 
-    def __init__(self):
+    def __init__(self, disable_logging=False):
         """
         Initialize the memory agent with an empty dictionary to store variables and a logger.
         """
@@ -15,6 +15,7 @@ class MemoryAgent:
         self.handler = logging.FileHandler('memory_agent.log')
         self.handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
         self.logger.addHandler(self.handler)
+        self.logger.disabled = disable_logging
 
     def collect_variables(self, agent_name, variables):
         """

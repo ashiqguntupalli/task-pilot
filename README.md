@@ -71,3 +71,27 @@ Each agent can:
 The memory component likely uses a key-value store or a similar structure to organize data, with each agent having designated variables or sections to read from and write to. This shared memory approach ensures that all agents work with consistent, up-to-date information throughout the task planning process.
 
 By using this shared memory system, the task-copilot can maintain context across different stages of the planning process, allowing for a cohesive and integrated approach to task management and structuring.
+
+## 6. Usage
+
+Task-pilot can be run from the command line with various options. Here are the available input parameters:
+
+- `-m` or `--model`: Specify the LLM model to use. Default is "llama3.2:3b".
+- `-l` or `--log`: Enable logging. If not specified, logging is disabled by default.
+
+### Prerequisites
+
+Before running task-pilot, ensure that:
+
+1. You have Python installed on your system.
+2. Ollama is installed and running in the background.
+3. The LLM model you intend to use is available in Ollama. For example, if you plan to use "llama3.2:3b", make sure it's pulled and ready in Ollama.
+
+To start Ollama with a specific model, use: `ollama run <model_name>`
+Replace `<model_name>` with the model you want to use (e.g., llama3.2:3b, deepseek-coder, etc.).
+
+### Examples
+
+1. Run task-pilot with default settings (logging disabled and model is llama3.2:3b): `python main.py`
+2. Run task-pilot with ollama compatible model and logging enabled: `python main.py -m deepseek-coder -l`
+3. Run task-pilot with ollama compatible model and logging disabled: `python main.py -m deepseek-coder`

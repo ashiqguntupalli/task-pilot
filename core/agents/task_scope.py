@@ -48,7 +48,10 @@ class TaskScopeAgent:
         """
         Collects answers from the user.
         """
+        print("\n")
         print(colored(f"Please answer the below question(s) to understand the scope of the task:\n{questions}", "green"))
+        print("\n")
+
         answer = input("Your answer for the above question(s): ")
 
         self.memory.collect_variables("task_scope", {"scope_answer": answer})
