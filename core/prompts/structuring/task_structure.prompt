@@ -6,7 +6,7 @@ scope of the task provided by the user is:
 detailed requirements provided by the user is:
 {detailed_requirements}
 
-with the above information, please come up with a coherent structuring of the task. Use markdown format for the structuring. Use the below format for the structuring:
+with the above information, please come up with a coherent structuring of the task. Use markdown format for the structuring and output should be in a nice human readable structure.. Use the below format for the structuring:
 Subject: <choose the readable and informative task subject>
 
 Specific Module/Component: <Specific Module/Component>

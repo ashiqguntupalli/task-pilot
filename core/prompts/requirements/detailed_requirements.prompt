@@ -9,7 +9,7 @@ Questions given to gather user input with reference to the scope are:
 Inputs and requirements provided by the user are:
 {requirement_answers}
 
-With the above information, please detail the list of user inputs and requirements. Use the below format for the list:
+With the above information, please detail the list of user inputs and requirements. Use the below format for the list and output should be in a nice human readable structure.:
 List of user input and requirements:
 
 <Detailed requirements list>

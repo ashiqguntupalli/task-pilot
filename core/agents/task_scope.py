@@ -1,4 +1,4 @@
-from core.utils import load_prompt
+from core.utils import load_prompt, exclude_tagged_text
 from termcolor import colored
 
 class TaskScopeAgent:
@@ -23,6 +23,8 @@ class TaskScopeAgent:
         self.memory = memory
         self.llm = llm
 
+        self.application_inputs = self.memory.get_inputs()
+
     def __frame_scope_questions(self):
         """
         Frames questions based on the task subject and domain.
@@ -36,7 +38,8 @@ class TaskScopeAgent:
         )
 
         if scope_questions_prompt:
-            scope_questions = self.llm.generate(scope_questions_prompt)
+            scope_questions = exclude_tagged_text(self.llm.generate(scope_questions_prompt), self.application_inputs["tag"])
+
             self.memory.collect_variables("task_scope", {"scope_questions": scope_questions})
 
             self.memory.log_message("Framing scope questions completed.")
@@ -69,7 +72,7 @@ class TaskScopeAgent:
         )
 
         if summary_scope_prompt:
-            summary = self.llm.generate(summary_scope_prompt)
+            summary = exclude_tagged_text(self.llm.generate(summary_scope_prompt), self.application_inputs["tag"])
             self.memory.collect_variables("task_scope", {"scope": summary})
 
             self.memory.log_message("Summarizing scope completed.")

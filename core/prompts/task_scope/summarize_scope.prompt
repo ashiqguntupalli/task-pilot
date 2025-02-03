@@ -8,7 +8,7 @@ Below are the answers from the user:
 
 {answers}
 
-With the above information, please summarize the high-level scope of the task. If there are any requirements provided by the user include those in the scope summary.
+With the above information, please summarize the high-level scope of the task. If there are any requirements provided by the user include those in the scope summary and output should be in a nice human readable structure.
 Use the below format for the summary:
 Scope:
 
