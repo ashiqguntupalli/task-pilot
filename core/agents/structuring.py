@@ -1,4 +1,4 @@
-from core.utils import load_prompt
+from core.utils import load_prompt, exclude_tagged_text
 from termcolor import colored
 
 class StructuringAgent:
@@ -24,6 +24,8 @@ class StructuringAgent:
         self.memory = memory
         self.llm = llm
 
+        self.application_inputs = self.memory.get_inputs()
+
     def __create_task_structure(self):
         """
         Creates the task structure based on the high-level scope and detailed
@@ -38,7 +40,8 @@ class StructuringAgent:
         )
 
         if task_structure_prompt:
-            task_structure = self.llm.generate(task_structure_prompt)
+            task_structure = exclude_tagged_text(self.llm.generate(task_structure_prompt), self.application_inputs["tag"])
+            
             self.memory.collect_variables("structuring", {"task_structure": task_structure})
 
             self.memory.log_message("Creating task structure completed.")

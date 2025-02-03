@@ -3,6 +3,7 @@ You are interacting with a user who has provided initial context about a task th
 1. Ask the user the relevant and readable questions to determine the high-level scope of the task.
 2. Minimum one question, Maximum 5 questions. Should strictly stick to questions no acknowledgement is needed.
 3. Example questions are added for the reference and some questions might not be relevant. If there are any specific questions, add them as well.
+4. Output should be in a nice human readable structure.
 
 The initial context provided by the user is:
 - Task Subject: {task_subject}

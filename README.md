@@ -78,6 +78,7 @@ Task-pilot can be run from the command line with various options. Here are the a
 
 - `-m` or `--model`: Specify the LLM model to use. Default is "llama3.2:3b".
 - `-l` or `--log`: Enable logging. If not specified, logging is disabled by default.
+- `-t` or `--tag`: Specify a tag whose content will be excluded from the task planning process.
 
 ### Prerequisites
 

@@ -1,4 +1,4 @@
-from core.utils import load_prompt
+from core.utils import load_prompt, exclude_tagged_text
 from termcolor import colored
 
 class RequirementsAgent:
@@ -16,6 +16,8 @@ class RequirementsAgent:
         self.memory = memory
         self.llm = llm
 
+        self.application_inputs = self.memory.get_inputs()
+
     def __frame_requirement_questions(self):
         """
         Frame questions to gather requirements.
@@ -28,7 +30,7 @@ class RequirementsAgent:
         )
 
         if requirement_questions_prompt:
-            requirement_questions = self.llm.generate(requirement_questions_prompt)
+            requirement_questions = exclude_tagged_text(self.llm.generate(requirement_questions_prompt), self.application_inputs["tag"])
             self.memory.collect_variables("requirements", {"requirement_questions": requirement_questions})
 
             self.memory.log_message("Framing requirement questions completed.")
@@ -62,7 +64,7 @@ class RequirementsAgent:
         )
 
         if detailed_requirements_prompt:
-            detailed_requirements = self.llm.generate(detailed_requirements_prompt)
+            detailed_requirements = exclude_tagged_text(self.llm.generate(detailed_requirements_prompt), self.application_inputs["tag"])
             self.memory.collect_variables("requirements", {"detailed_requirements": detailed_requirements})
 
             self.memory.log_message("Creating detailed requirements list completed.")

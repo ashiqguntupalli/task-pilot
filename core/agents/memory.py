@@ -10,6 +10,7 @@ class MemoryAgent:
         Initialize the memory agent with an empty dictionary to store variables and a logger.
         """
         self.variables = {}
+        self.inputs = {}
         self.logger = logging.getLogger('memory_agent')
         self.logger.setLevel(logging.INFO)
         self.handler = logging.FileHandler('memory_agent.log')
@@ -48,4 +49,18 @@ class MemoryAgent:
         :param error: The error to log.
         """
         self.logger.error(error)
+
+    def collect_inputs(self, inputs: dict):
+        """
+        Collect user inputs and store them in the memory.
+        :param inputs: A dictionary of inputs.
+        """
+        self.inputs.update(inputs)
+
+    def get_inputs(self) -> dict:
+        """
+        Get the inputs collected so far.
+        :return: A dictionary of all inputs.
+        """
+        return self.inputs
 

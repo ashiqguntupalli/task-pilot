@@ -21,6 +21,7 @@ def main():
     parser = argparse.ArgumentParser(description="Task pilot")
     parser.add_argument('-m', '--model', type=str, default="llama3.2:3b", help="LLM model to use")
     parser.add_argument('-l', '--log', action="store_true", help="Enable logging")
+    parser.add_argument('-t', '--tag', type=str, default=None, help="Text within the tag will be excluded")
 
     args = parser.parse_args()
 
@@ -29,6 +30,10 @@ def main():
     llm_instance = llm(model=args.model)
 
     memory = MemoryAgent(disable_logging=not args.log)
+
+    memory.collect_inputs({"model": args.model,
+                           "tag": args.tag,
+                           "log": args.log})
 
     orchestrator = OrchestratorAgent(memory=memory, llm=llm_instance)
     orchestrator.run()
